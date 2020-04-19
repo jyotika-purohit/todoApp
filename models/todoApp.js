@@ -1,28 +1,28 @@
 const mongoose=require('mongoose');
 
-const todoListSchema=new mongooseSchema({
-    taskName={
+const todoListSchema= new mongoose.Schema({
+    taskName:{
         type:String,
         required:true,
     },
-    todoDate={
+    todoDate:{
         type:Date,
         required:true
     },
-    flagged={
+    flagged:{
         type:Boolean,
         default:false
     },
-    isDone={
+    isDone:{
         type:Boolean,
         default:false
     },
-    category={
+    category:{
         type:String,
         required:true
     }
 });
 
-const task=mongoose.model('tasks',todoListSchema);
+const task=mongoose.model('Tasks',todoListSchema);
 
-module.exports=tasks;
+module.exports=task;
