@@ -1,3 +1,6 @@
+const db=require('../config/mongoose');
+const task=require('../models/todoApp');
+
 module.exports.list=function(req,res){
    
     task.find({},function(err,task){
@@ -5,7 +8,7 @@ module.exports.list=function(req,res){
             console.log("error has occurred while retreiving data",err);
             return;
         }
-        return res.render('tasks',{
+        return res.render('list',{
             title:"Tasks!!!",
             tasks:task
             // 'task' being the collection passed in 'tasks' to tasks.ejs
@@ -14,4 +17,4 @@ module.exports.list=function(req,res){
     });
 
     
-}
+} 
