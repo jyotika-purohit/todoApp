@@ -1,6 +1,17 @@
 module.exports.list=function(req,res){
-    return res.render('list',{
-        title:'Tasklist '
+   
+    task.find({},function(err,task){
+        if(err){
+            console.log("error has occurred while retreiving data",err);
+            return;
+        }
+        return res.render('tasks',{
+            title:"Tasks!!!",
+            tasks:task
+            // 'task' being the collection passed in 'tasks' to tasks.ejs
+        });
+
     });
+
     
 }
