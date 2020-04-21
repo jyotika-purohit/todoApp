@@ -10,5 +10,12 @@ router.get('/markDone',require('./markDone'));
 router.get('/markFlagged',require('./markFlagged'));
 router.get('/doneTasks',require('./doneTasks'));
 router.get('/flaggedTasks',require('./flaggedTasks'));
+//category
+
+router.get('/category/personal',require('./categoryRouter'));
+router.get('/category/work',require('./categoryRouter'));
+router.get('/category/school',require('./categoryRouter'));
+router.get('/category/cleaning',require('./categoryRouter'));
+router.get('/category/other',require('./categoryRouter'));
 
 module.exports=router;

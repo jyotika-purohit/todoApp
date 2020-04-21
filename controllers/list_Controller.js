@@ -9,7 +9,7 @@ module.exports.list=function(req,res){
             return;
         }
         return res.render('list',{
-            title:"Tasks!!!",
+            title:"Tasks",
             tasks:task
             // 'task' being the collection passed in 'tasks' to tasks.ejs
         });

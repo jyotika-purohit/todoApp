@@ -82,13 +82,15 @@ h1,h3{
 }
 
 .task-list ul li{
+    overflow:auto;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    
 }
 
-.task-list ul li h1{
+.task-list ul li h2{
     text-transform: capitalize;
 }
 .categoryBox{
